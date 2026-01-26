@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { t } from '../i18n/ja'
+---
+
+<Layout t={t}>
+  <div class="bg-[#e5e5e5]">
+    <div class="mx-auto max-w-500">
+      <section class="relative">
+        <header>
+          <h1 class="sr-only">{t.sections.hero.h1}</h1>
+          <p class="sr-only">{t.sections.hero.tagline}</p>
+        </header>
+        <p class="sr-only">{t.sections.hero.lead}</p>
+
+        <img src="/assets/images/section_01.webp" alt="" loading="eager" fetchpriority="high" />
+
+        <a href={t.links.map.external} class="hover absolute bottom-1/14 left-1/10 w-3/10" target="_blank">
+          <img src="/assets/images/btn_map.webp" alt={t.sections.hero.ctaMapAlt} loading="lazy" />
+        </a>
+      </section>
+
+      <section>
+        <h2 class="sr-only">{t.sections.about.h2}</h2>
+        <p class="sr-only">{t.sections.about.p1}</p>
+        <p class="sr-only">{t.sections.about.p2}</p>
+
+        <h3 class="sr-only">{t.sections.about.origin.h3}</h3>
+        <p class="sr-only">{t.sections.about.origin.p1}</p>
+        <p class="sr-only">{t.sections.about.origin.p2}</p>
+        <p class="sr-only">{t.sections.about.origin.p3}</p>
+
+        <h3 class="sr-only">{t.sections.about.h3b}</h3>
+        <p class="sr-only">{t.sections.about.p3}</p>
+        <p class="sr-only">{t.sections.about.p4}</p>
+        <p class="sr-only">{t.sections.about.p5}</p>
+
+        <img src="/assets/images/section_02.webp" alt="" loading="lazy" />
+      </section>
+
+      <section>
+        <h2 class="sr-only">{t.sections.exhibition.h2}</h2>
+        <h3 class="sr-only">{t.sections.exhibition.title}</h3>
+        <p class="sr-only">{t.sections.exhibition.subtitle}</p>
+
+        <p class="sr-only">
+          {t.sections.exhibition.termLabel}
+          <time datetime={t.sections.exhibition.start.datetime}>{t.sections.exhibition.start.label}</time> —
+          <time datetime={t.sections.exhibition.end.datetime}>{t.sections.exhibition.end.label}</time>
+        </p>
+
+        <img src="/assets/images/section_03.webp" alt="" loading="lazy" />
+      </section>
+
+      <section>
+        <h2 class="sr-only">{t.sections.artist.h2}</h2>
+        <p class="sr-only">{t.sections.artist.lead}</p>
+
+        <h3 class="sr-only">{t.sections.artist.nameJa}</h3>
+        <p class="sr-only">{t.sections.artist.nameEn}</p>
+
+        <img src="/assets/images/section_04.webp" alt={t.sections.artist.portraitAlt} loading="lazy" />
+
+        <p class="sr-only">{t.sections.artist.bio.p1}</p>
+        <p class="sr-only">{t.sections.artist.bio.p2}</p>
+        <p class="sr-only">{t.sections.artist.bio.p3}</p>
+        <p class="sr-only">{t.sections.artist.bio.p4}</p>
+        <p class="sr-only">{t.sections.artist.bio.p5}</p>
+
+        <h4 class="sr-only">{t.sections.artist.statement.h4}</h4>
+        <p class="sr-only">{t.sections.artist.statement.p1}</p>
+      </section>
+
+      <section class="relative">
+        <h2 class="sr-only">{t.sections.gallery.h2}</h2>
+        <p class="sr-only">{t.sections.gallery.lead}</p>
+        <p class="sr-only">{t.sections.gallery.p1}</p>
+        <p class="sr-only">{t.sections.gallery.p2}</p>
+        <img src="/assets/images/section_05.webp" alt="" loading="lazy" />
+      </section>
+
+      <section class="relative">
+        <h2 class="sr-only">{t.sections.access.h2}</h2>
+        <p class="sr-only">{t.sections.access.zip}</p>
+
+        <address class="sr-only">
+          {t.sections.access.addressLines[0]}<br />
+          {t.sections.access.addressLines[1]}
+        </address>
+
+        <img src="/assets/images/section_06.webp" alt="" loading="lazy" />
+
+        <a href={t.links.map.external} class="hover absolute bottom-1/16 left-1/2 w-3/10 -translate-x-1/2" target="_blank">
+          <img src="/assets/images/btn_map.webp" alt={t.sections.access.ctaMapAlt} loading="lazy" />
+        </a>
+
+        <div class="absolute top-[17.5%] left-0 h-[55%] w-full">
+          <iframe title={t.sections.access.mapFrameTitle} class="h-full w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.10061187981503!2d135.49746200566685!3d34.66455629546092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e76d4d90b7cf%3A0x232917f4fb0ba2c4!2z44OK44Oz44OQ44OX44Op44K244OT44Or!5e0!3m2!1sja!2sjp!4v1769397064292!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+      <section class="relative">
+        <h2 class="sr-only">{t.sections.contact.h2}</h2>
+        <p class="sr-only">{t.sections.contact.p1}</p>
+        <p class="sr-only">{t.sections.contact.p2}</p>
+
+        <h3 class="sr-only">{t.sections.contact.mail.h3}</h3>
+        <p class="sr-only">{t.sections.contact.mail.label}</p>
+
+        <h3 class="sr-only">{t.sections.contact.tel.h3}</h3>
+        <p class="sr-only">{t.sections.contact.tel.label}</p>
+
+        <footer class="sr-only">{t.sections.contact.footer}</footer>
+
+        <img src="/assets/images/section_07.webp" alt="" loading="lazy" />
+
+        <a id="mailLink" href="#" class="hover absolute bottom-[38%] left-1/25 w-3/5">
+          <img src="/assets/images/btn_mail.webp" alt={t.sections.contact.mail.buttonAlt} loading="lazy" />
+        </a>
+
+        <a href={t.links.telHref} class="hover absolute bottom-[23%] left-1/25 w-3/10">
+          <img src="/assets/images/btn_tel.webp" alt={t.sections.contact.tel.buttonAlt} loading="lazy" />
+        </a>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<script
+  is:inline
+  define:vars={{
+    mailUser: t.links.mail.user,
+    mailDomain: t.links.mail.domain,
+  }}
+>
+  const a = document.getElementById('mailLink')
+  if (a) a.href = `mailto:${mailUser}@${mailDomain}`
+</script>

@@ -1,0 +1,32 @@
+.form {
+  @apply text-14;
+
+  input[type="text"],
+  textarea {
+    @apply w-full bg-white px-16 py-12;
+  }
+
+  input[type="submit"] {
+    @apply text-14 text-primary h-46 w-198 cursor-pointer rounded-full bg-white font-serif font-medium;
+  }
+
+  p:has(input[type="submit"]) {
+    @apply relative mx-auto w-fit;
+    &::before {
+      @apply bg-primary pointer-events-none absolute top-1/2 right-8 h-30 w-30 -translate-y-1/2 rounded-full content-[''];
+    }
+    &::after {
+      font-family: "icomoon" !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\e903";
+      @apply text-11 pointer-events-none absolute top-1/2 right-17 -translate-y-1/2 text-white;
+    }
+  }
+}

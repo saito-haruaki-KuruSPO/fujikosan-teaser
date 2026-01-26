@@ -1,0 +1,29 @@
+.splide-hero {
+  .splide__pagination {
+    counter-reset: pagination-num;
+    @apply z-2 gap-16 lg:pr-80;
+  }
+  .splide__pagination__page {
+    @apply relative h-86 w-2 overflow-visible rounded-none bg-white !opacity-100 before:absolute before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-x-1/2 before:-translate-y-1/2 lg:h-115;
+
+    &::before {
+      counter-increment: pagination-num;
+      content: "0" counter(pagination-num);
+      @apply text-12/1 font-sen absolute -left-16 -translate-x-full font-semibold text-white/75 transition-all duration-300 max-lg:hidden;
+    }
+
+    &::after {
+      @apply bg-primary absolute top-0 left-0 h-0 w-2 opacity-0 transition-[height] duration-5000 ease-linear content-[''];
+    }
+
+    &.is-active {
+      @apply transform-none;
+      &::after {
+        @apply animate-progress opacity-100;
+      }
+      &::before {
+        @apply text-primary;
+      }
+    }
+  }
+}

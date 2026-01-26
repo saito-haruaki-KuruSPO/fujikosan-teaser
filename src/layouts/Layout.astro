@@ -1,0 +1,24 @@
+---
+import '../styles/global.css'
+import SeoHead from '../components/SeoHead.astro'
+
+// 最上部パディング トップページと下層ページで分ける
+const paddingTop = Astro.url.pathname === '/' ? '' : ''
+const bodyClass = ` ${paddingTop}`
+
+interface Props {
+  lang?: string
+  t: any
+}
+const { lang = 'ja', t } = Astro.props
+---
+
+<!doctype html>
+<html lang={lang} class="group/html">
+  <SeoHead t={t.head} />
+  <body class={`js-body text-16 group/body font-sans flex min-h-screen flex-col overflow-x-hidden leading-150 font-normal [&.is-active]:overflow-hidden ${bodyClass}`}>
+    <main class="flex-1">
+      <slot />
+    </main>
+  </body>
+</html>

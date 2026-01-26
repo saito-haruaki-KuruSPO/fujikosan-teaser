@@ -1,0 +1,20 @@
+/* アニメーションディレイ */
+@utility animation-delay-none {
+  animation-delay: 0s !important;
+}
+
+@utility animation-delay-* {
+  animation-delay: --value([*]) !important;
+  animation-delay: calc(--value(integer) * 1ms) !important;
+}
+
+/* テキストシャドウ */
+@utility text-shadow-* {
+  text-shadow: --value([\*]);
+}
+
+/* フォントサイズ */
+@utility text-* {
+  font-size: calc(--value(integer) / 16 * 1rem);
+  line-height: max(1, calc(--modifier(integer) * 0.01));
+}

@@ -1,0 +1,30 @@
+---
+interface Props {
+  t: any
+}
+
+const { t } = Astro.props
+
+const title = t.title
+const description = t.description
+const url = t.url
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no, email=no, address=no" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <!-- OGP -->
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={`${url}ogp.png`} />
+  <meta property="og:site_name" content={title} />
+  <meta property="og:description" content={description} />
+</head>

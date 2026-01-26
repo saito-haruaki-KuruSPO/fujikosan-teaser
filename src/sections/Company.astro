@@ -1,0 +1,44 @@
+---
+import Heading from '../components/Heading.astro'
+import Container from '../layouts/Container.astro'
+import Section from '../layouts/Section.astro'
+
+type definitionItem = {
+  termHtml: string
+  descriptionHtml: string
+}
+const { t } = Astro.props
+
+const definition: ReadonlyArray<definitionItem> = t?.definition ?? []
+---
+
+<Section id="company">
+  <Container className="pt-160 lg:pt-264">
+    <div class="relative grid gap-40 lg:grid-cols-[1fr_56.25%]">
+      <div>
+        <Heading primary={t.heading.primary} secondary={t.heading.secondary} className="mb-40 lg:mb-56 lg:justify-items-start" />
+        <h3 class="text-24/200 lg:text-32/200 mb-40 font-serif font-bold" set:html={t.titleHtml} />
+        <p class="text-14/200 lg:text-16/200 mb-32 lg:mb-40" set:html={t.bodyHtml} />
+        <figure class="mx-auto grid w-304 gap-12 lg:mr-0">
+          <img src="/assets/images/ceo.webp" alt="" width="304" height="193" loading="lazy" />
+          <figcaption class="text-14 justify-self-end font-medium" set:html={t.caption} />
+        </figure>
+      </div>
+      <div class="grid gap-32">
+        <div class="mx-[calc(50%-50vw)] lg:mx-0">
+          <iframe class="h-232 w-full lg:h-407" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.4830593217307!2d139.6324936764792!3d35.467590272656935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185db9b36118c9%3A0xb19cb19fae5dbd44!2z5qiq5rWc5biC5Lit5aSu5Y245aOy5biC5aC05pys5aC05rC055Sj54mp6YOo!5e0!3m2!1sja!2sjp!4v1761714109211!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <dl class="grid gap-32">
+          {
+            definition.map((item) => (
+              <div class="border-primary grid gap-16 border-b pb-32 lg:grid-cols-[164px_1fr] lg:items-center">
+                <dt class="text-14/100 lg:text-16 text-primary font-bold lg:pl-16" set:html={item.termHtml} />
+                <dd class="text-14/150 lg:text-16 font-medium" set:html={item.descriptionHtml} />
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </Container>
+</Section>

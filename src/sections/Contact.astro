@@ -1,0 +1,102 @@
+---
+import Container from '../layouts/Container.astro'
+import Section from '../layouts/Section.astro'
+import Heading from '../components/Heading.astro'
+
+const { t } = Astro.props
+const f = t.form.fields
+---
+
+<Section id="contact">
+  <Container className="pt-160">
+    <div class="grid gap-64 lg:grid-cols-[1fr_56.25%] lg:gap-40">
+      <div>
+        <Heading primary={t.heading.primary} secondary={t.heading.secondary} className="mb-40 lg:justify-items-start" />
+        <p class="text-14/200 text-center lg:text-left" set:html={t.bodyHtml} />
+      </div>
+      <div class="bg-secondary rounded-8 px-24 py-32 lg:p-40">
+        <div class="form">
+          <form action="https://ssl.form-mailer.jp/fm/service/Forms/confirm" method="post" name="form1" ENCTYPE="multipart/form-data" accept-charset="UTF-8">
+            <input type="hidden" name="key" value="da5aa4f4871140" />
+            <div class="grid gap-24">
+              <label class="grid gap-8">
+                <span class="font-medium">
+                  {f.company.label}
+                  {f.company.required && <span class="text-required">※</span>}
+                </span>
+                <input name="field_7622831" type="text" value="" size="30" />
+              </label>
+              <div class="grid gap-24 lg:grid-cols-2">
+                <label class="grid gap-8">
+                  <span class="font-medium">
+                    {f.name.last.label}
+                    {f.name.last.required && <span class="text-required">※</span>}
+                  </span>
+                  <input name="field_7622824_sei" type="text" />
+                </label>
+                <label class="grid gap-8">
+                  <span class="font-medium">
+                    {f.name.first.label}
+                    {f.name.first.required && <span class="text-required">※</span>}
+                  </span>
+                  <input name="field_7622824_mei" type="text" />
+                </label>
+              </div>
+              <div class="grid gap-24 lg:grid-cols-2">
+                <label class="grid gap-8">
+                  <span class="font-medium">
+                    {f.kana.last.label}
+                    {f.kana.last.required && <span class="text-required">※</span>}
+                  </span>
+                  <input name="field_7622830_sei" type="text" />
+                </label>
+                <label class="grid gap-8">
+                  <span class="font-medium">
+                    {f.kana.first.label}
+                    {f.kana.first.required && <span class="text-required">※</span>}
+                  </span>
+                  <input name="field_7622830_mei" type="text" />
+                </label>
+              </div>
+              <label class="grid gap-8">
+                <span class="font-medium">
+                  {f.email.label}
+                  {f.email.required && <span class="text-required">※</span>}
+                </span>
+                <input name="field_7622825" type="text" size="30" />
+              </label>
+              <label class="grid gap-8">
+                <span class="font-medium">
+                  {f.tel.label}
+                  {f.tel.required && <span class="text-required">※</span>}</span
+                >
+                <input name="field_7622829" type="text" />
+              </label>
+              <label class="grid gap-8">
+                <span class="font-medium">
+                  {f.message.label}
+                  {f.message.required && <span class="text-required">※</span>}
+                </span>
+                <textarea name="field_7622832" cols="30" rows="5"></textarea>
+              </label>
+            </div>
+            <div class="mt-32">
+              <label class="flex justify-center gap-8">
+                <input name="field_7622834" type="checkbox" value={f.privacy.value} />
+                <span class="font-medium">
+                  {f.privacy.label}
+                  {f.privacy.required && <span class="text-required">※</span>}
+                </span>
+              </label>
+            </div>
+            <p class="mt-48">
+              <input name="submit" type="submit" value={t.form.submit.value} />
+            </p>
+            <input type="hidden" name="code" value="utf8" />
+          </form>
+        </div>
+        <a class="mt-20 ml-auto block w-80" href="https://www.form-mailer.jp/?utm_source=usersite&utm_medium=banner&utm_campaign=banner-link-Installation&utm_content=banner_g04.gif" target="_blank"><img src="https://www.form-mailer.jp/img/banner_g04.gif" alt={t.form.banner.alt} loading="lazy" /></a>
+      </div>
+    </div>
+  </Container>
+</Section>

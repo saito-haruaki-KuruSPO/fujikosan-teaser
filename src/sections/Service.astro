@@ -1,0 +1,38 @@
+---
+import Domestic from '../components/Domestic.astro'
+import Heading from '../components/Heading.astro'
+import Overseas from '../components/Overseas.astro'
+import Container from '../layouts/Container.astro'
+import Section from '../layouts/Section.astro'
+type MarqueeItem = { alt: string }
+const { t } = Astro.props
+
+const marquee: ReadonlyArray<MarqueeItem> = t?.marquee ?? []
+---
+
+<Section id="service" className="pt-160">
+  <Container className="mb-160">
+    <div class="mb-56 lg:mb-80">
+      <Heading primary={t.heading.primary} secondary={t.heading.secondary} className="mb-72 lg:mb-60" />
+      <h3 class="text-32 lg:text-40/100 text-primary mb-56 text-center font-serif font-bold" set:html={t.titleHtml} />
+      <p class="text-16/200 [&>em]:text-primary [&>em]:text-20 lg:[&>em]:text-24 text-center" set:html={t.bodyHtml} />
+    </div>
+    <div class="mx-[calc(50%-50vw)] flex gap-8 overflow-hidden lg:gap-24">
+      {
+        Array.from({ length: 2 }).map((_, i) => (
+          <ul class="animate-marquee flex gap-8 lg:gap-24" aria-hidden={i === 1 ? 'true' : 'false'}>
+            {marquee.map((item, j) => (
+              <li class="w-[calc(136/390*100vw)] even:mt-16 lg:w-342 lg:even:mt-48">
+                <img class="w-full" src={`/assets/images/service_0${j + 1}.webp`} alt={item.alt} width="136" height="96" loading="lazy" />
+              </li>
+            ))}
+          </ul>
+        ))
+      }
+    </div>
+  </Container>
+  <div class="js-parallax-container h-4000 min-h-[200vh]">
+    <Domestic t={t.domestic} />
+    <Overseas t={t.overseas} />
+  </div>
+</Section>

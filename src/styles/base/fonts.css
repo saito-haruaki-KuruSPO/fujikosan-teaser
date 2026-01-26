@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "ZenKakuGothicNew";
+  src: url("/assets/fonts/ZenKakuGothicNew-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenKakuGothicNew";
+  src: url("/assets/fonts/ZenKakuGothicNew-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenKakuGothicNew";
+  src: url("/assets/fonts/ZenKakuGothicNew-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenOldMincho";
+  src: url("/assets/fonts/ZenOldMincho-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenOldMincho";
+  src: url("/assets/fonts/ZenOldMincho-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenOldMincho";
+  src: url("/assets/fonts/ZenOldMincho-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ZenOldMincho";
+  src: url("/assets/fonts/ZenOldMincho-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("/assets/fonts/LibreBaskerville-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("/assets/fonts/LibreBaskerville-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sen";
+  src: url("/assets/fonts/Sen-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* icomoon */
+@font-face {
+  font-family: "icomoon";
+  src: url("/assets/fonts/icomoon.woff?qljbk1") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-halo:before {
+  content: "\e904";
+}
+.icon-x:before {
+  content: "\e900";
+}
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-arrow:before {
+  content: "\e903";
+}

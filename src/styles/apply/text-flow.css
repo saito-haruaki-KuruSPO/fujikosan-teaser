@@ -1,0 +1,19 @@
+.text-flow-normal {
+  @apply indent-0 tracking-normal;
+}
+
+.text-flow-semiwide {
+  @apply indent-[.01em] tracking-[.01em];
+}
+
+.text-flow-wide {
+  @apply indent-[.025em] tracking-wide;
+}
+
+.text-flow-wider {
+  @apply indent-[.05em] tracking-wider;
+}
+
+.text-flow-widest {
+  @apply indent-[.1em] tracking-widest;
+}

@@ -1,0 +1,122 @@
+---
+import FeatureTitle from '../components/FeatureTitle.astro'
+import Heading from '../components/Heading.astro'
+import Mask from '../components/Mask.astro'
+import Container from '../layouts/Container.astro'
+import Section from '../layouts/Section.astro'
+
+const imgClasses = 'w-full'
+const imgContainerClasses = 'absolute overflow-hidden'
+
+const { t } = Astro.props
+---
+
+<Section id="feature" className="pt-160">
+  <Heading primary={t.heading.primary} secondary={t.heading.secondary} className="mb-100 lg:mb-200" />
+  <ul class="mb-200 grid gap-40 lg:gap-155">
+    <li class="relative z-1">
+      <div class="bg-primary absolute -top-40 left-0 h-40 w-full [clip-path:polygon(0%_0%,100%_100%,0%_100%)] lg:-top-155 lg:h-155"></div>
+      <div class="bg-primary py-48 text-white lg:py-72">
+        <Container className="max-w-1440">
+          <article class="lg:flex">
+            <div class="relative z-1 mb-40 grid gap-40 lg:mb-0 lg:w-640 lg:gap-0 lg:pl-80">
+              <div class="flex items-center gap-8 lg:mb-32"><i class="icon-halo text-16"></i><p class="text-14/100 lg:text-16 font-en font-bold uppercase">Feature 01</p></div>
+              <FeatureTitle titlePrimary={t.items.f01.title.primary} titleSecondary={t.items.f01.title.secondary} maskColorClass="bg-primary" />
+              <p class="text-14/200 lg:text-16/200" set:html={t.items.f01.bodyHtml} />
+            </div>
+            <div class="relative mx-auto h-[calc(312/390*100vw)] w-[calc(338/390*100vw)] lg:mx-0 lg:h-auto lg:w-[calc(100%-640px)]">
+              <div class={`${imgContainerClasses} top-[calc(56/390*100vw)] left-0 w-[calc(168/390*100vw)] lg:right-[min(422px,calc(422/1440*100vw))] lg:-top-[min(45px,calc(45/1440*100vw))] lg:left-auto lg:w-[min(280px,calc(280/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_01_01.webp" alt={t.items.f01.alts[0]} width="168" height="112" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} top-0 right-0 w-[calc(136/390*100vw)] lg:w-[min(248px,calc(248/1440*100vw))] lg:right-[min(54px,calc(54/1440*100vw))] lg:top-[min(-135px,calc(-135/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_01_02.webp" alt={t.items.f01.alts[1]} width="136" height="224" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} bottom-0 left-[calc(91/390*100vw)] w-[calc(176/390*100vw)] lg:w-[min(400px,calc(400/1440*100vw))] lg:-bottom-[min(83px,calc(83/1440*100vw))] lg:right-[min(202px,calc(202/1440*100vw))] lg:left-auto`}>
+                <img class={imgClasses} src="/assets/images/feature_01_03.webp" alt={t.items.f01.alts[2]} width="176" height="120" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </Container>
+      </div>
+      <div class="bg-primary absolute -bottom-40 left-0 h-40 w-full [clip-path:polygon(0%_0%,100%_0%,100%_100%)] lg:-bottom-155 lg:h-155"></div>
+    </li>
+    <li class="relative">
+      <div class="absolute -top-40 left-0 h-40 w-full bg-black [clip-path:polygon(0%_100%,100%_0%,100%_100%)] lg:-top-155 lg:h-155"></div>
+      <div class="bg-black py-48 text-white lg:py-72">
+        <Container className="max-w-1440">
+          <article class="lg:flex lg:flex-row-reverse">
+            <div class="relative z-1 mb-40 grid justify-items-end gap-40 lg:mb-0 lg:w-696 lg:gap-0 lg:pr-80">
+              <div class="flex items-center gap-8 lg:mb-32"><i class="icon-halo text-16"></i><p class="text-14/100 lg:text-16 font-en font-bold uppercase">Feature 02</p></div>
+              <FeatureTitle titlePrimary={t.items.f02.title.primary} titleSecondary={t.items.f02.title.secondary} maskColorClass="bg-black" className="justify-items-end" />
+              <p class="text-14/200 lg:text-16/200 text-right" set:html={t.items.f02.bodyHtml} />
+            </div>
+            <div class="relative mx-auto h-[calc(224/390*100vw)] w-[calc(358/390*100vw)] lg:h-auto lg:w-[calc(100%-696px)]">
+              <div class={`${imgContainerClasses} top-0 right-0 w-[calc(195/390*100vw)] lg:w-[min(432px,calc(432/1440*100vw))] lg:left-[min(240px,calc(240/1440*100vw))] lg:top-[min(-150px,calc(-150/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_02_01.webp" alt={t.items.f02.alts[0]} width="195" height="128" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} bottom-0 left-0 w-[calc(195/390*100vw)] lg:w-[min(432px,calc(432/1440*100vw))] lg:left-[min(52px,calc(52/1440*100vw))] lg:-bottom-[min(60px,calc(60/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_02_02.webp" alt={t.items.f02.alts[1]} width="195" height="128" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </Container>
+      </div>
+      <div class="absolute -bottom-40 left-0 h-40 w-full bg-black [clip-path:polygon(0%_0%,100%_0%,0%_100%)] lg:-bottom-155 lg:h-155"></div>
+    </li>
+    <li class="relative z-1">
+      <div class="bg-primary absolute -top-40 left-0 h-40 w-full [clip-path:polygon(0%_0%,100%_100%,0%_100%)] lg:-top-155 lg:h-155"></div>
+      <div class="bg-primary py-48 text-white lg:py-72">
+        <Container className="max-w-1440">
+          <article class="lg:flex">
+            <div class="relative z-1 mb-40 grid gap-40 lg:mb-0 lg:w-640 lg:gap-0 lg:pl-80">
+              <div class="flex items-center gap-8 lg:mb-32"><i class="icon-halo text-16"></i><p class="text-14/100 lg:text-16 font-en font-bold uppercase">Feature 03</p></div>
+              <FeatureTitle titlePrimary={t.items.f03.title.primary} titleSecondary={t.items.f03.title.secondary} maskColorClass="bg-primary" />
+              <p class="text-14/200 lg:text-16/200" set:html={t.items.f03.bodyHtml} />
+            </div>
+            <div class="relative mx-auto h-[calc(240/390*100vw)] w-[calc(352/390*100vw)] lg:h-auto lg:w-[calc(100%-640px)]">
+              <div class={`${imgContainerClasses} top-0 left-0 w-[calc(216/390*100vw)] lg:w-[min(407px,calc(407/1440*100vw))] lg:right-[min(300px,calc(300/1440*100vw))] lg:left-auto`}>
+                <img class={imgClasses} src="/assets/images/feature_03_01.webp" alt={t.items.f03.alts[0]} width="216" height="160" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} bottom-0 right-0 w-[calc(176/390*100vw)] lg:w-[min(318px,calc(318/1440*100vw))] lg:right-[min(80px,calc(80/1440*100vw))] `}>
+                <img class={imgClasses} src="/assets/images/feature_03_02.webp" alt={t.items.f03.alts[1]} width="176" height="120" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </Container>
+      </div>
+      <div class="bg-primary absolute -bottom-40 left-0 h-40 w-full [clip-path:polygon(0%_0%,100%_0%,100%_100%)] lg:-bottom-155 lg:h-155"></div>
+    </li>
+    <li class="relative">
+      <div class="absolute -top-40 left-0 h-40 w-full bg-black [clip-path:polygon(0%_100%,100%_0%,100%_100%)] lg:-top-155 lg:h-155"></div>
+      <div class="bg-black py-48 text-white lg:py-72">
+        <Container className="max-w-1440">
+          <article class="lg:flex lg:flex-row-reverse">
+            <div class="relative z-1 mb-40 grid justify-items-end gap-40 lg:mb-0 lg:w-640 lg:gap-0 lg:pr-80">
+              <div class="flex items-center gap-8 lg:mb-32"><i class="icon-halo text-16"></i><p class="text-14/100 lg:text-16 font-en font-bold uppercase">Feature 04</p></div>
+              <FeatureTitle titlePrimary={t.items.f04.title.primary} titleSecondary={t.items.f04.title.secondary} maskColorClass="bg-black" className="justify-items-end" />
+              <p class="text-14/200 lg:text-16/200 text-right" set:html={t.items.f04.bodyHtml} />
+            </div>
+            <div class="relative mx-auto h-[calc(246/390*100vw)] w-[calc(353/390*100vw)] lg:h-auto lg:w-[calc(100%-640px)]">
+              <div class={`${imgContainerClasses} top-0 left-[calc(27/390*100vw)] w-[calc(94/390*100vw)] lg:w-[min(176px,calc(176/1440*100vw))] lg:top-[min(-27px,calc(-27/1440*100vw))] lg:left-[min(108px,calc(108/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_04_01.webp" alt={t.items.f04.alts[0]} width="94" height="94" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} top-[calc(48/390*100vw)] right-0 w-[calc(200/390*100vw)] lg:w-[min(386px,calc(386/1440*100vw))] lg:right-auto lg:bottom-[min(40px,calc(40/1440*100vw))] lg:top-auto lg:left-[min(322px,calc(322/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_04_02.webp" alt={t.items.f04.alts[1]} width="200" height="136" loading="lazy" />
+              </div>
+              <div class={`${imgContainerClasses} bottom-0 left-0 w-[calc(176/390*100vw)] lg:w-[min(335px,calc(335/1440*100vw))] lg:left-[min(52px,calc(52/1440*100vw))] lg:bottom-[min(-60px,calc(-60/1440*100vw))]`}>
+                <img class={imgClasses} src="/assets/images/feature_04_03.webp" alt={t.items.f04.alts[2]} width="176" height="120" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </Container>
+      </div>
+      <div class="absolute -bottom-40 left-0 h-40 w-full bg-black [clip-path:polygon(0%_0%,100%_0%,0%_100%)] lg:-bottom-155 lg:h-155"></div>
+    </li>
+  </ul>
+  <a class="hover mx-auto block max-w-1012" href="https://uosuku.jp/lp?u=2404&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnKPhfBS5w7Pke3NHjP5riv2wEShb4hdJ5XKsN9pkBcedO_J02GeThsgmjN6A_aem_mC7hbYz9zpPBpD3YV_kaqA" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source media="(min-width:768px)" srcset="/assets/images/uosuku_lg.webp" type="image/webp" />
+      <img src="/assets/images/uosuku_sm.webp" width="1440" height="1080" alt={t.uosuku.banner.alt} />
+    </picture>
+  </a>
+</Section>

@@ -1,0 +1,35 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "browserslist": [
+    "> 1%",
+    "last 1 versions",
+    "Firefox ESR"
+  ],
+  "scripts": {
+    "dev": "concurrently \"astro dev\" \"vite build --watch\"",
+    "build": "vite build && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "img:webp": "npx tsx src/plugin/webp/index.ts"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.16",
+    "@types/sharp": "^0.32.0",
+    "astro": "^5.15.3",
+    "astro-relative-links": "^0.4.2",
+    "gsap": "^3.13.0",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^4.1.16",
+    "tailwindcss-intersect": "^2.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}
