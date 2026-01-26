@@ -13,10 +13,10 @@ import { t } from '../i18n/ja'
         </header>
         <p class="sr-only">{t.sections.hero.lead}</p>
 
-        <img src="/assets/images/section_01.webp" alt="" loading="eager" fetchpriority="high" />
+        <img src="/assets/images/section_01.webp" alt="" loading="eager" fetchpriority="high" width="500" height="842" />
 
         <a href={t.links.map.external} class="hover absolute bottom-1/14 left-1/10 w-3/10" target="_blank">
-          <img src="/assets/images/btn_map.webp" alt={t.sections.hero.ctaMapAlt} loading="lazy" />
+          <img src="/assets/images/btn_map.webp" alt={t.sections.hero.ctaMapAlt} loading="lazy" width="150" height="32" />
         </a>
       </section>
 
@@ -35,7 +35,7 @@ import { t } from '../i18n/ja'
         <p class="sr-only">{t.sections.about.p4}</p>
         <p class="sr-only">{t.sections.about.p5}</p>
 
-        <img src="/assets/images/section_02.webp" alt="" loading="lazy" />
+        <img src="/assets/images/section_02.webp" alt="" loading="lazy" width="500" height="1190" />
       </section>
 
       <section>
@@ -49,7 +49,7 @@ import { t } from '../i18n/ja'
           <time datetime={t.sections.exhibition.end.datetime}>{t.sections.exhibition.end.label}</time>
         </p>
 
-        <img src="/assets/images/section_03.webp" alt="" loading="lazy" />
+        <img src="/assets/images/section_03.webp" alt="" loading="lazy" width="500" height="2440" />
       </section>
 
       <section>
@@ -59,7 +59,7 @@ import { t } from '../i18n/ja'
         <h3 class="sr-only">{t.sections.artist.nameJa}</h3>
         <p class="sr-only">{t.sections.artist.nameEn}</p>
 
-        <img src="/assets/images/section_04.webp" alt={t.sections.artist.portraitAlt} loading="lazy" />
+        <img src="/assets/images/section_04.webp" alt={t.sections.artist.portraitAlt} loading="lazy" width="500" height="1047" />
 
         <p class="sr-only">{t.sections.artist.bio.p1}</p>
         <p class="sr-only">{t.sections.artist.bio.p2}</p>
@@ -76,7 +76,7 @@ import { t } from '../i18n/ja'
         <p class="sr-only">{t.sections.gallery.lead}</p>
         <p class="sr-only">{t.sections.gallery.p1}</p>
         <p class="sr-only">{t.sections.gallery.p2}</p>
-        <img src="/assets/images/section_05.webp" alt="" loading="lazy" />
+        <img src="/assets/images/section_05.webp" alt="" loading="lazy" width="500" height="1789" />
       </section>
 
       <section class="relative">
@@ -88,10 +88,10 @@ import { t } from '../i18n/ja'
           {t.sections.access.addressLines[1]}
         </address>
 
-        <img src="/assets/images/section_06.webp" alt="" loading="lazy" />
+        <img src="/assets/images/section_06.webp" alt="" loading="lazy" width="500" height="880" />
 
         <a href={t.links.map.external} class="hover absolute bottom-1/16 left-1/2 w-3/10 -translate-x-1/2" target="_blank">
-          <img src="/assets/images/btn_map.webp" alt={t.sections.access.ctaMapAlt} loading="lazy" />
+          <img src="/assets/images/btn_map.webp" alt={t.sections.access.ctaMapAlt} loading="lazy" width="150" height="32" />
         </a>
 
         <div class="absolute top-[17.5%] left-0 h-[55%] w-full">
@@ -112,27 +112,16 @@ import { t } from '../i18n/ja'
 
         <footer class="sr-only">{t.sections.contact.footer}</footer>
 
-        <img src="/assets/images/section_07.webp" alt="" loading="lazy" />
+        <img src="/assets/images/section_07.webp" alt="" loading="lazy" width="500" height="572" />
 
         <a id="mailLink" href="#" class="hover absolute bottom-[38%] left-1/25 w-3/5">
-          <img src="/assets/images/btn_mail.webp" alt={t.sections.contact.mail.buttonAlt} loading="lazy" />
+          <img src="/assets/images/btn_mail.webp" alt={t.sections.contact.mail.buttonAlt} loading="lazy" width="300" height="19" />
         </a>
 
         <a href={t.links.telHref} class="hover absolute bottom-[23%] left-1/25 w-3/10">
-          <img src="/assets/images/btn_tel.webp" alt={t.sections.contact.tel.buttonAlt} loading="lazy" />
+          <img src="/assets/images/btn_tel.webp" alt={t.sections.contact.tel.buttonAlt} loading="lazy" width="150" height="18" />
         </a>
       </section>
     </div>
   </div>
 </Layout>
-
-<script
-  is:inline
-  define:vars={{
-    mailUser: t.links.mail.user,
-    mailDomain: t.links.mail.domain,
-  }}
->
-  const a = document.getElementById('mailLink')
-  if (a) a.href = `mailto:${mailUser}@${mailDomain}`
-</script>

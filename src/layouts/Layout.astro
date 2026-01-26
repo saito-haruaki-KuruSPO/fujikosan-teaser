@@ -20,5 +20,15 @@ const { lang = 'ja', t } = Astro.props
     <main class="flex-1">
       <slot />
     </main>
+    <script
+      is:inline
+      define:vars={{
+        mailUser: t.links.mail.user,
+        mailDomain: t.links.mail.domain,
+      }}
+    >
+      const a = document.getElementById('mailLink')
+      if (a) a.href = `mailto:${mailUser}@${mailDomain}`
+    </script>
   </body>
 </html>
