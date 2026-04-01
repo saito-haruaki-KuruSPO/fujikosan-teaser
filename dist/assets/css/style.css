@@ -349,6 +349,10 @@
     bottom: 6.25%;
   }
 
+  .bottom-60 {
+    bottom: calc(var(--spacing) * 60);
+  }
+
   .bottom-\[23\%\] {
     bottom: 23%;
   }
